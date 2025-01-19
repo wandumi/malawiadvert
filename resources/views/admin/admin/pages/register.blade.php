@@ -18,7 +18,7 @@
             <!-- Logo on Top -->
             <div class="text-center mb-8">
                 <a href="/" class="inline-block">
-                    <img src="{{ asset('logos/malawivendorlogo.png') }}" alt="Malawi Adverts Logo" class="h-20 w-auto">
+                    <img src="{{ asset('logos/malawivendorlogo.png') }}" alt="MalawiVendor Logo" class="h-20 w-auto">
                 </a>
             </div>
 

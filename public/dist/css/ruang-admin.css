@@ -308,11 +308,11 @@ a:focus {
 }
 
 .border-left-primary {
-  border-left: .25rem solid #3f51b5 !important
+  border-left: .25rem solid #000000 !important
 }
 
 .border-bottom-primary {
-  border-bottom: .25rem solid #3f51b5 !important
+  border-bottom: .25rem solid #000000 !important
 }
 
 .border-left-secondary {
@@ -513,8 +513,8 @@ a:focus {
 }
 
 .topbar .dropdown-list .dropdown-header {
-  background-color: #3f51b5;
-  border: 1px solid #3f51b5;
+  background-color: #000000;
+  border: 1px solid #000000;
   padding-top: .75rem;
   padding-bottom: .75rem;
   color: #fff
@@ -558,7 +558,7 @@ a:focus {
 
 .topbar .dropdown-list .dropdown-item:active {
   background-color: #eaecf4;
-  color: #3a3b45
+  color: #11a518;
 }
 
 @media (min-width:576px) {
@@ -597,7 +597,7 @@ a:focus {
 }
 
 .bg-navbar {
-  background-color: #6777ef
+  background-color: #000000;
 }
 
 .sidebar {
@@ -1016,7 +1016,7 @@ a:focus {
 
   .sidebar.toggled .nav-item .collapse .collapse-inner .collapse-item.active,
   .sidebar.toggled .nav-item .collapsing .collapse-inner .collapse-item.active {
-      color: #3f51b5;
+      color: #000000;
       font-weight: 800
   }
 
@@ -1092,7 +1092,7 @@ a:focus {
 
 .sidebar-light .sidebar-brand {
   color: #fafafa;
-  background-color: #4c60da
+  background-color: #212121fa;
 }
 
 .sidebar-light hr.sidebar-divider {
@@ -1792,7 +1792,7 @@ a:focus {
   content: attr(data-text);
   position: absolute;
   left: -2px;
-  text-shadow: 1px 0 #3f51b5;
+  text-shadow: 1px 0 #000000;
   top: 0;
   color: #5a5c69;
   background: #f8f9fc;
@@ -1907,14 +1907,14 @@ body.sidebar-toggled footer.sticky-footer {
   -webkit-box-shadow: 0 .125rem .25rem 0 rgba(58, 59, 69, .2) !important;
   box-shadow: 0 .125rem .25rem 0 rgba(58, 59, 69, .2) !important;
   color: #fff;
-  background-color: #3f51b5;
-  border-color: #3f51b5
+  background-color: #000000;
+  border-color: #000000
 }
 
 .input-group-prepend span {
   -webkit-box-shadow: 0 .125rem .25rem 0 rgba(58, 59, 69, .2) !important;
   box-shadow: 0 .125rem .25rem 0 rgba(58, 59, 69, .2) !important;
   color: #fff;
-  background-color: #3f51b5;
-  border-color: #3f51b5
+  background-color: #000000;
+  border-color: #000000
 }

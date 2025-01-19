@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('title', 'Malawi Adverts - Dashboard')
+@section('title', 'MalawiVendor - Dashboard')
 @section('title-2', 'Dashboard')
 @section('title-3', 'Dashboard')
 
