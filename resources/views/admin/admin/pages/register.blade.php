@@ -9,104 +9,88 @@
     <meta name="author" content="">
     <link href="img/logo/logo.png" rel="icon">
     <title>MalawiAdverts - Register</title>
-    <link href="{{ asset('dist/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('dist/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('dist/css/ruang-admin.min.css') }}" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gradient-login">
-    {{-- Register Content --}}
-    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center">
-        <div class="row justify-content-center w-100">
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+<body class="bg-gradient-to-r from-gray-100 to-gray-200">
+    <div class="min-h-screen flex items-center justify-center px-4">
+        <div class="max-w-md w-full">
+            <!-- Logo on Top -->
+            <div class="text-center mb-8">
+                <a href="/" class="inline-block">
+                    <img src="{{ asset('logos/malawivendorlogo.png') }}" alt="Malawi Adverts Logo" class="h-20 w-auto">
+                </a>
+            </div>
 
-                {{-- <div class="text-center m-4">
-                    <button class="btn btn-link h1 text-dark"
-                        style="text-decoration: none; outline: none; font-size:2.5em;"
-                        onclick="window.location.href='/'">
-                        Malawi Adverts
-                    </button>
 
-                </div> --}}
-                <div class="card shadow-sm my-5">
-
-                    <div class="card-body p-0">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="login-form">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Register</h1>
-                                    </div>
-                                    <form method="POST" action="{{ route('register') }}">
-                                        @csrf
-                                        <div class="form-group">
-                                            <label>First Name</label>
-                                            <input type="text" name="name"
-                                                class="form-control @error('name') is-invalid @enderror"
-                                                id="exampleInputFirstName" placeholder="Enter First Name">
-                                            @error('name')
-                                                <div class="invalid-feedback"> {{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Last Name</label>
-                                            <input type="text" name="lname" class="form-control"
-                                                id="exampleInputLastName" placeholder="Enter Last Name">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" name="email"
-                                                class="form-control @error('email') is-invalid @enderror"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address" value="{{ old('email') }}">
-                                            @error('email')
-                                                <div class="invalid-feedback"> {{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Password</label>
-                                            <input type="password" name="password"
-                                                class="form-control @error('email') is-invalid @enderror"
-                                                id="exampleInputPassword" placeholder="Password">
-                                            @error('password')
-                                                <div class="invalid-feedback"> {{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password-confirm">Repeat Password</label>
-                                            <input type="password" name="password_confirmation" class="form-control"
-                                                id="password-confirm" placeholder="Repeat Password">
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block">Register</button>
-                                        </div>
-                                        {{-- <hr>
-                                        <a href="{{ route('dashboard') }}" class="btn btn-google btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Register with Google
-                                        </a>
-                                        <a href="{{ route('dashboard') }}" class="btn btn-facebook btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                                        </a> --}}
-                                    </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="font-weight-bold small" href="{{ route('login') }}">Already have an
-                                            account?</a>
-                                    </div>
-                                    <div class="text-center">
-                                    </div>
-                                </div>
-                            </div>
+            <div class="bg-white rounded-lg shadow-lg">
+                <div class="p-8">
+                    <div class="text-center">
+                        <h1 class="text-2xl font-bold text-gray-900 mb-6">Register</h1>
+                    </div>
+                    <form method="POST" action="{{ route('register') }}" class="space-y-4">
+                        @csrf
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">First Name</label>
+                            <input type="text" name="name"
+                                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 @error('name') border-red-500 @enderror"
+                                placeholder="Enter First Name">
+                            @error('name')
+                                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                            @enderror
                         </div>
+
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Last Name</label>
+                            <input type="text" name="lname"
+                                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Enter Last Name">
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                            <input type="email" name="email"
+                                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 @error('email') border-red-500 @enderror"
+                                placeholder="Enter Email Address" value="{{ old('email') }}">
+                            @error('email')
+                                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                            <input type="password" name="password"
+                                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 @error('password') border-red-500 @enderror"
+                                placeholder="Password">
+                            @error('password')
+                                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Repeat Password</label>
+                            <input type="password" name="password_confirmation"
+                                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Repeat Password">
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-black text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-200">
+                            Register
+                        </button>
+                    </form>
+
+                    <div class="mt-6 text-center">
+                        <a class="text-sm font-semibold text-black hover:text-green-600" href="{{ route('login') }}">
+                            Already have an account?
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
-    {{-- Register Content --}}
     <script src="{{ asset('dist/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('dist/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('dist/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('dist/js/ruang-admin.min.js') }}"></script>
 </body>
